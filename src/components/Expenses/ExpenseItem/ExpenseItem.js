@@ -1,5 +1,5 @@
 import ExpenseDate from "../ExpenseDate/ExpenseDate";
-import "./ExpenseItem.css";
+import "./ExpenseItem.scss";
 
 const ExpenseItem = (props) => {
   return (
