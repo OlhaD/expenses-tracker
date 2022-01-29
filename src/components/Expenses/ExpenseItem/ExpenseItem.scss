@@ -1,50 +1,48 @@
-.ExpenseItem {
-  background-color: rgb(67, 66, 67);
+$background-color: rgb(67, 66, 67);
+$background-color-price: #40005d;
+$border-color-price: rgb(143, 121, 153);
+
+.expense-item {
+  background-color: $background-color;
   margin: 1rem 0;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.ExpenseItem__description {
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
-}
+  .description {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
 
-.ExpenseItem h2 {
-  color: #3a3a3a;
-  font-size: 1rem;
-  margin: 0 1rem;
-  color: white;
-}
+    h2 {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
 
-.ExpenseItem__price {
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #40005d;
-  border: 1px solid white;
-  padding: 0.5rem;
-  border-radius: 12px;
+    .price {
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: $background-color-price;
+      border: 3px solid $border-color-price;
+      padding: 0.5rem;
+      border-radius: 12px;
+    }
+  }
 }
 
 @media (max-width: 580px) {
-  .ExpenseItem__description {
+  .description {
     flex-direction: column;
     align-items: flex-end;
     flex-flow: column-reverse;
     justify-content: flex-start;
     flex: 1;
-  }
 
-  .ExpenseItem__description h2 {
-    flex: 1;
-  }
-
-  .ExpenseItem__price {
+    h2 {
+      flex: 1;
+    }
   }
 }

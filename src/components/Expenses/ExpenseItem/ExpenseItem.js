@@ -4,11 +4,11 @@ import "./ExpenseItem.scss";
 
 const ExpenseItem = (props) => {
   return (
-    <Card className="ExpenseItem">
+    <Card className="expense-item">
       <ExpenseDate date={props.date} />
-      <div className="ExpenseItem__description">
+      <div className="description">
         <h2>{props.title}</h2>
-        <div className="ExpenseItem__price">${props.price}</div>
+        <div className="price">${props.price}</div>
       </div>
     </Card>
   );
