@@ -1,0 +1,44 @@
+$background-color: rgb(158, 134, 236);
+$color: rgb(60, 45, 98);
+$input-border-color: #ccc;
+
+.expense-form {
+  background-color: $background-color;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: $color;
+
+  form {
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      align-content: flex-start;
+
+      .control {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+
+        label {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+        input {
+          padding: 0.5rem;
+          border-radius: 6px;
+          border: 1px solid $input-border-color;
+          width: 20rem;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .actions {
+      text-align: right;
+    }
+  }
+}
