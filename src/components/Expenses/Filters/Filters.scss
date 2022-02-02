@@ -1,0 +1,14 @@
+.filters {
+  .yearFilter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    select {
+      width: 6rem;
+      height: 2rem;
+      border-radius: 6px;
+      padding: 5px;
+    }
+  }
+}

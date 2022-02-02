@@ -34,8 +34,12 @@ const ExpenseItemsList = () => {
 
   return (
     <div>
-      <Filters selectedYear={filteredYear} onYearSelected={selectYearHandler} />
       <Card className="expenseItemsList">
+        <Filters
+          selectedYear={filteredYear}
+          onYearSelected={selectYearHandler}
+        />
+
         <ExpenseItem
           date={expenses[0].date}
           title={expenses[0].title}
