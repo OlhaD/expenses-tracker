@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="app">
       <Layout>
-        <NewExpense/>
+        <NewExpense />
         <ExpenseItemsList />
       </Layout>
     </div>
