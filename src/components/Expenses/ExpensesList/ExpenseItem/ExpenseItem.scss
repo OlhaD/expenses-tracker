@@ -1,6 +1,6 @@
 $background-color: rgb(67, 66, 67);
-$background-color-price: #40005d;
-$border-color-price: rgb(143, 121, 153);
+$background-color-amount: #40005d;
+$border-color-amount: rgb(143, 121, 153);
 
 .expense-item {
   background-color: $background-color;
@@ -22,11 +22,11 @@ $border-color-price: rgb(143, 121, 153);
       margin: 0 1rem;
     }
 
-    .price {
+    .amount {
       font-size: 1rem;
       font-weight: bold;
-      background-color: $background-color-price;
-      border: 3px solid $border-color-price;
+      background-color: $background-color-amount;
+      border: 3px solid $border-color-amount;
       padding: 0.5rem;
       border-radius: 12px;
     }

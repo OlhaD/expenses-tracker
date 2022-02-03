@@ -1,14 +1,14 @@
 import ExpenseForm from './ExpenseForm/ExpenseForm';
 import './NewExpense.scss';
 
-const NewExpense = () => {
+const NewExpense = (props) => {
     const expenseSaveHandler = (expenseData) => {
         const expense = {
             ...expenseData,
             // todo: random is used for the demo only
             id: Math.random().toString()
         };
-        console.log(expense);
+        props.onExpenseAdded(expense);
     }
 
     return (<div className='new-expense'>
