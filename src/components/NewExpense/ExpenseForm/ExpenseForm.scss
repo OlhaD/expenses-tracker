@@ -1,11 +1,10 @@
-$background-color: rgb(158, 134, 236);
+$background-color: #a892ee;
 $color: rgb(60, 45, 98);
 $input-border-color: #ccc;
 
 .expense-form {
   background-color: $background-color;
   border-radius: 10px;
-  margin-bottom: 2rem;
   padding: 1rem;
   color: $color;
 
@@ -27,6 +26,7 @@ $input-border-color: #ccc;
           font-weight: bold;
           margin-bottom: 0.5rem;
         }
+
         input {
           padding: 0.5rem;
           border-radius: 6px;

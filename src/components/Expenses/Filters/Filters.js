@@ -7,6 +7,10 @@ const Filters = (props) => {
     props.onYearSelected(year);
   };
 
+  const monthSelectHandler = (value) => {
+    props.onMonthSelected(value);
+  }
+
   return (
     <div className="filters">
       <div className="yearFilter">
@@ -18,7 +22,7 @@ const Filters = (props) => {
           <option>2019</option>
         </select>
       </div>
-      <MonthFilter />
+      <MonthFilter expenses={props.expenses} onMonthSelected={monthSelectHandler} />
     </div>
   );
 };
