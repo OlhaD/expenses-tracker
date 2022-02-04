@@ -11,29 +11,22 @@ const Expenses = (props) => {
   const [filteredExpenses, setFilteredExpenses] = useState(props.expenses);
 
   const selectYearHandler = (year) => {
-    setYear(year, () => setFilteredExpenses(getFilteredExpenses()));
+    setYear(year);
+    const expenses = getFilteredExpenses(year, filteredMonth);
+    setFilteredExpenses(expenses);
   };
 
   const selectMonthHandler = (month) => {
-    // setMonth(month, () => {
-    //   const expenses = getFilteredExpenses();
-    //   setFilteredExpenses(expenses);
-    // });
-    setMonth((prevMonth) => {
-      console.log(filteredMonth); // "React is awesome!"
-      
-      const expenses = getFilteredExpenses();
-      setFilteredExpenses(expenses);
-
-      return filteredMonth;
-    });
+    setMonth(month);
+    const expenses = getFilteredExpenses(filteredYear, month);
+    setFilteredExpenses(expenses);
   };
 
-  function getFilteredExpenses() {
+  function getFilteredExpenses(year, month) {
     return props.expenses.filter(
       (expense) =>
-        expense.date.getFullYear() === filteredYear &&
-        expense.date.getMonth() === filteredMonth
+        expense.date.getFullYear() === year &&
+        expense.date.getMonth() === month
     );
   }
 
