@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ExpenseForm.scss";
+import classes from "./ExpenseForm.module.scss";
 
 const ExpenseForm = (props) => {
   const [state, setState] = useState({
@@ -41,10 +41,10 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <div className="expense-form">
+    <div className={classes.expenseForm}>
       <form onSubmit={formSubmitHandler}>
-        <div className="controls">
-          <div className="control">
+        <div className={classes.controls}>
+          <div className={classes.control}>
             <label>Title</label>
             <input
               type="text"
@@ -53,7 +53,7 @@ const ExpenseForm = (props) => {
               onChange={changeHandler}
             />
           </div>
-          <div className="control">
+          <div className={classes.control}>
             <label>Amount</label>
             <input
               type="number"
@@ -64,7 +64,7 @@ const ExpenseForm = (props) => {
               onChange={changeHandler}
             />
           </div>
-          <div className="control">
+          <div className={classes.control}>
             <label>Date</label>
             <input
               type="date"
@@ -76,7 +76,7 @@ const ExpenseForm = (props) => {
             />
           </div>
         </div>
-        <div className="actions">
+        <div className={classes.actions}>
           <button type="button" onClick={cancelHandler}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>

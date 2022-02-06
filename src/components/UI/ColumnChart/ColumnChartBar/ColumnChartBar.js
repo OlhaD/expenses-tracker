@@ -1,4 +1,4 @@
-import "./ColumnChartBar.scss";
+import classes from "./ColumnChartBar.module.scss";
 import "./ColumnChartBar";
 
 const ColumnChartBar = (props) => {
@@ -9,11 +9,11 @@ const ColumnChartBar = (props) => {
   }
 
   return (
-    <div className="bar" onClick={() => props.onClick(props.value)}>
-      <div className="inner">
-        <div className="fill" style={{ height: barFillHeight }}></div>
+    <div className={classes.bar} onClick={() => props.onClick(props.value)}>
+      <div className={classes.inner}>
+        <div className={classes.fill} style={{ height: barFillHeight }}></div>
       </div>
-      <div className="label">
+      <div className={classes.label}>
         <label>{props.name}</label>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ExpenseForm from "./ExpenseForm/ExpenseForm";
-import "./NewExpense.scss";
+import classes from "./NewExpense.module.scss";
 
 const NewExpense = (props) => {
   const expenseSaveHandler = (expenseData) => {
@@ -19,7 +19,7 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className="new-expense">
+    <div className={classes.newExpense}>
       {!isEditing && (
         <div className="add-new">
           <button type="button" onClick={() => addNewExpenseClickChanged(true)}>

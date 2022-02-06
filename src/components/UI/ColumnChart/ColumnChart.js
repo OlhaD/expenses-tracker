@@ -1,9 +1,9 @@
-import "./ColumnChart.scss";
+import classes from "./ColumnChart.module.scss";
 import ColumnChartBar from "./ColumnChartBar/ColumnChartBar";
 
 const ColumnChart = (props) => {
   return (
-    <div className="chart">
+    <div className={classes.chart}>
       {props.data.map((columnData) => (
         <ColumnChartBar
           key={columnData.name}

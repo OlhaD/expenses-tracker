@@ -1,8 +1,8 @@
-import "./Layout.scss";
+import classes from "./Layout.module.scss";
 
 const Layout = (props) => {
   return (
-    <div className="layout">
+    <div className={classes.layout}>
       <main>{props.children}</main>
     </div>
   );

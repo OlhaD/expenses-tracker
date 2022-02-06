@@ -1,14 +1,14 @@
 import Card from "../../../UI/Card/Card";
 import ExpenseDate from "./ExpenseDate/ExpenseDate";
-import "./ExpenseItem.scss";
+import classes from "./ExpenseItem.module.scss";
 
 const ExpenseItem = (props) => {
   return (
-    <Card className="expense-item">
+    <Card className={classes.expenseItem}>
       <ExpenseDate date={props.date} />
-      <div className="description">
+      <div className={classes.description}>
         <h2>{props.title}</h2>
-        <div className="amount">${props.amount}</div>
+        <div className={classes.amount}>${props.amount}</div>
       </div>
     </Card>
   );

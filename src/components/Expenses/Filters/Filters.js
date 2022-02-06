@@ -1,4 +1,4 @@
-import './Filters.scss';
+import classes from './Filters.module.scss';
 import MonthFilter from "./MonthFilter/MonthFilter";
 
 const Filters = (props) => {
@@ -12,8 +12,8 @@ const Filters = (props) => {
   }
 
   return (
-    <div className="filters">
-      <div className="yearFilter">
+    <div className={classes.filters}>
+      <div className={classes.yearFilter}>
         <label>Filter by year</label>
         <select value={props.selectedYear} onChange={yearSelectHandler}>
           <option>2022</option>
