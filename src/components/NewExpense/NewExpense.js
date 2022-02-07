@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../UI/Button/Button";
 import ExpenseForm from "./ExpenseForm/ExpenseForm";
 import classes from "./NewExpense.module.scss";
 
@@ -22,9 +23,9 @@ const NewExpense = (props) => {
     <div className={classes.newExpense}>
       {!isEditing && (
         <div className="add-new">
-          <button type="button" onClick={() => addNewExpenseClickChanged(true)}>
+          <Button type="button" onClick={() => addNewExpenseClickChanged(true)}>
             Add New Expense
-          </button>
+          </Button>
         </div>
       )}
       {isEditing && (

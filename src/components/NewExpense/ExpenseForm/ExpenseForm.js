@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../UI/Button/Button";
 import classes from "./ExpenseForm.module.scss";
 
 const ExpenseForm = (props) => {
@@ -19,7 +20,7 @@ const ExpenseForm = (props) => {
 
   const cancelHandler = () => {
     props.onExpenseAddClosed();
-  }
+  };
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
@@ -45,40 +46,45 @@ const ExpenseForm = (props) => {
       <form onSubmit={formSubmitHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
-            <label>Title</label>
+            <label htmlFor="title">Title</label>
             <input
               type="text"
+              id="title"
               name="title"
               value={state.title}
               onChange={changeHandler}
             />
           </div>
           <div className={classes.control}>
-            <label>Amount</label>
+            <label htmlFor="amount">Amount</label>
             <input
               type="number"
+              id="amount"
+              name="amount"
               min="0.01"
               step="0.01"
-              name="amount"
               value={state.amount}
               onChange={changeHandler}
             />
           </div>
           <div className={classes.control}>
-            <label>Date</label>
+            <label htmlFor="date">Date</label>
             <input
               type="date"
+              id="date"
+              name="date"
               min="2019-01-01"
               max="2022-12-31"
-              name="date"
               value={state.date}
               onChange={changeHandler}
             />
           </div>
         </div>
         <div className={classes.actions}>
-          <button type="button" onClick={cancelHandler}>Cancel</button>
-          <button type="submit">Add Expense</button>
+          <Button type="button" onClick={cancelHandler}>
+            Cancel
+          </Button>
+          <Button type="submit">Add Expense</Button>
         </div>
       </form>
     </div>

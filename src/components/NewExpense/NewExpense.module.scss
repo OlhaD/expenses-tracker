@@ -1,10 +1,5 @@
 $background-color: #a892ee;
 $box-shadow-color: rgba(0, 0, 0, 0.25);
-$button-color: #fff;
-$button-main-color: #40005d;
-$button-main-color-hover: #510674;
-$button-alternative-color: #220131;
-$button-alternative-color-hover: #ddb3f8;
 
 .newExpense {
   background-color: $background-color;
@@ -15,32 +10,4 @@ $button-alternative-color-hover: #ddb3f8;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 1px 8px $box-shadow-color;
-
-  button {
-    font: inherit;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border: 1px solid $button-main-color;
-    background-color: $button-main-color;
-    color: $button-color;
-    border-radius: 12px;
-    margin-right: 1rem;
-
-    :hover,
-    :active {
-      background-color: $button-main-color-hover;
-      border-color: $button-main-color-hover;
-    }
-
-    .alternative {
-      color: $button-alternative-color;
-      border-color: transparent;
-      background-color: transparent;
-
-      :hover,
-      :active {
-        background-color: $button-alternative-color-hover;
-      }
-    }
-  }
 }
