@@ -1,3 +1,8 @@
+$backgroundColor: #c3b4f3;
+$borderColor: #313131;
+$fillBackgroundColor: #4826b9;
+$labelColor: #000000;
+
 .bar {
   height: 100%;
   display: flex;
@@ -8,16 +13,16 @@
   .inner {
     height: 100%;
     width: 100%;
-    border: 1px solid #313131;
+    border: 1px solid $borderColor;
     border-radius: 12px;
-    background-color: #c3b4f3;
+    background-color: $backgroundColor;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     .fill {
-      background-color: #4826b9;
+      background-color: $fillBackgroundColor;
       width: 100%;
       transition: all 0.3s ease-out;
     }
@@ -27,6 +32,6 @@
     font-weight: bold;
     font-size: 0.5rem;
     text-align: center;
-    color: black;
+    color: $labelColor;
   }
 }

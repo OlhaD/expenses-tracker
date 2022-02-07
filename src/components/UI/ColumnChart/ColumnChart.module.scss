@@ -1,7 +1,9 @@
+$backgroundColor: #f8dfff;
+
 .chart {
     padding: 1rem;
     border-radius: 12px;
-    background-color: #f8dfff;
+    background-color: $backgroundColor;
     text-align: center;
     display: flex;
     justify-content: space-around;
