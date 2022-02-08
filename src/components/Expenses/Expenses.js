@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Card from "../UI/Card/Card";
 import Filters from "./Filters/Filters";
 import classes from "./Expenses.module.scss";
@@ -9,6 +9,10 @@ const Expenses = (props) => {
   const [filteredYear, setYear] = useState(currentDate.getFullYear());
   const [filteredMonth, setMonth] = useState(currentDate.getMonth());
   const [filteredExpenses, setFilteredExpenses] = useState(props.expenses);
+
+  React.useEffect(() => {
+    setFilteredExpenses(props.expenses);
+  }, [props.expenses]);
 
   const selectYearHandler = (year) => {
     setYear(year);
