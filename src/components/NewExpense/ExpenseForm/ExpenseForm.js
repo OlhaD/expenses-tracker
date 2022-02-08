@@ -25,6 +25,10 @@ const ExpenseForm = (props) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
 
+    if (!isFormValid()) {
+      return;
+    }
+
     const expenseData = {
       title: state.title,
       amount: state.amount,
@@ -40,6 +44,20 @@ const ExpenseForm = (props) => {
     });
     props.onExpenseAddClosed();
   };
+
+  function isFormValid() {
+    if (state.title.trim().length === 0) {
+      return false;
+    }
+    if (+state.amount < 0.01) {
+      return false;
+    }
+    if (state.date < "2019-01-01" || state.date > "2022-12-31") {
+      return false;
+    }
+
+    return true;
+  }
 
   return (
     <div className={classes.expenseForm}>
