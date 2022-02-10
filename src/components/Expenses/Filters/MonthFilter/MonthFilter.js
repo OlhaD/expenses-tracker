@@ -32,11 +32,7 @@ const MonthFilter = (props) => {
     };
   });
 
-  return (
-    <div>
-      <ColumnChart data={data} onClick={clickHandler} />
-    </div>
-  );
+  return <ColumnChart data={data} onClick={clickHandler} />;
 };
 
 export default MonthFilter;

@@ -29,29 +29,26 @@ const Expenses = (props) => {
   function getFilteredExpenses(year, month) {
     return props.expenses.filter(
       (expense) =>
-        expense.date.getFullYear() === year &&
-        expense.date.getMonth() === month
+        expense.date.getFullYear() === year && expense.date.getMonth() === month
     );
   }
 
   return (
-    <div>
-      <Card className={classes.expenses}>
-        <Filters
-          selectedYear={filteredYear}
-          onYearSelected={selectYearHandler}
-          selectedMonth={filteredMonth}
-          onMonthSelected={selectMonthHandler}
-          expenses={props.expenses}
-        />
+    <Card className={classes.expenses}>
+      <Filters
+        selectedYear={filteredYear}
+        onYearSelected={selectYearHandler}
+        selectedMonth={filteredMonth}
+        onMonthSelected={selectMonthHandler}
+        expenses={props.expenses}
+      />
 
-        <ExpensesList
-          filteredYear={filteredYear}
-          filteredMonth={filteredMonth}
-          expenses={filteredExpenses}
-        />
-      </Card>
-    </div>
+      <ExpensesList
+        filteredYear={filteredYear}
+        filteredMonth={filteredMonth}
+        expenses={filteredExpenses}
+      />
+    </Card>
   );
 };
 

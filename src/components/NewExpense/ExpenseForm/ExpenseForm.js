@@ -49,7 +49,7 @@ const ExpenseForm = (props) => {
     if (state.title.trim().length === 0) {
       return false;
     }
-    if (+state.amount < 0.01) {
+    if (state.amount < 0.01) {
       return false;
     }
     if (state.date < "2019-01-01" || state.date > "2022-12-31") {
