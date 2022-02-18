@@ -8,3 +8,13 @@ $background-color: rgb(56, 54, 56);
   justify-content: center;
   padding: 2rem 10rem;
 }
+
+@media(max-width: 500px){
+  .layout {
+    padding: 0;
+  }
+
+  main {
+      width: 100%;
+  }
+}

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import classes from "./App.module.scss";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Layout from "./components/UI/Layout/Layout";
@@ -36,12 +35,10 @@ const App = () => {
   };
 
   return (
-    <div className={classes.app}>
-      <Layout>
-        <NewExpense onExpenseAdded={expenseAddedHandler} />
-        <Expenses expenses={expenses} />
-      </Layout>
-    </div>
+    <Layout>
+      <NewExpense onExpenseAdded={expenseAddedHandler} />
+      <Expenses expenses={expenses} />
+    </Layout>
   );
 };
 
